@@ -11,3 +11,9 @@ install:
                     serviceName:    "ydeliver"
                     startUpType:    "Manual"
                     artifact:       "service.zip"
+            WindowsServiceInstallUtil:
+                config:
+                    servicePath:    "c:\\public\\ydeliver-windows-service"
+                    serviceExeName: "ydeliver-windows-service.exe"
+                    serviceName:    "ydeliver"
+                    artifact:       "service.zip"
