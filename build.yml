@@ -1,1 +1,2 @@
 packageContents:
+    "$buildPath/*":     "service.zip"
