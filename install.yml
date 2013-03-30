@@ -1,0 +1,12 @@
+conventions:
+    artifactsDir: "$rootDir/build"
+
+install:
+    ydeliver-windows-service: 
+        tasks:
+            WindowsService:
+                config:
+                    servicePath:    "c:\\public\\ydeliver-windows-service"
+                    serviceExeName: "ydeliver-windows-service.exe"
+                    serviceName:    "ydeliver"
+                    startUpType:    "Manual"
