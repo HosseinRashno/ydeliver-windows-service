@@ -1,5 +1,5 @@
 conventions:
-    artifactsDir: "$rootDir/build"
+    artifactsDir: "$rootDir\\build"
 
 install:
     ydeliver-windows-service: 
@@ -10,3 +10,4 @@ install:
                     serviceExeName: "ydeliver-windows-service.exe"
                     serviceName:    "ydeliver"
                     startUpType:    "Manual"
+                    artifact:       "service.zip"
