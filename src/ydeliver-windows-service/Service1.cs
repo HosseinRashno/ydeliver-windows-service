@@ -1,27 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Linq;
-using System.ServiceProcess;
-using System.Text;
+﻿using System.ServiceProcess;
 
 namespace ydeliver_windows_service
 {
-    public partial class Service1 : ServiceBase
+    public partial class ydeliver : ServiceBase
     {
-        public Service1()
+        public ydeliver()
         {
             InitializeComponent();
+            if (!System.Diagnostics.EventLog.SourceExists("YDeliverSource"))
+            {
+                System.Diagnostics.EventLog.CreateEventSource(
+                    "YDeliverSource", "YDeliverLog");
+            }
+            eventLog1.Source = "YDeliverSource";
+            eventLog1.Log = "YDeliverLog";
         }
 
         protected override void OnStart(string[] args)
         {
+            eventLog1.WriteEntry("In OnStart");
         }
 
         protected override void OnStop()
         {
+            eventLog1.WriteEntry("In onStop.");
         }
     }
 }
